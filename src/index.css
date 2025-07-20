@@ -1,0 +1,198 @@
+html,
+    body {
+      background: #D3CCE3;
+      background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);
+      background: linear-gradient(to right, #E9E4F0, #D3CCE3);
+      color: #362323;
+      font-family: sans-serif;
+      margin: 0;
+    }
+
+    h2 {
+      text-decoration: underline;
+    }
+
+    input,
+    select,
+    textarea {
+      margin: 0.5em 0;
+      width: 100%;
+    }
+
+    .title {
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .clear {
+      clear: both;
+    }
+
+    .checkBox {
+      display: block;
+      cursor: pointer;
+      width: 15px;
+      height: 15px;
+      border: 3px solid rgba(255, 255, 255, 0);
+      border-radius: 10px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0px 0px 0px 2px #fff;
+    }
+
+    .checkBox div {
+      width: 60px;
+      height: 60px;
+      background-color: #fff;
+      top: -52px;
+      left: -52px;
+      position: absolute;
+      transform: rotateZ(45deg);
+      z-index: 100;
+    }
+
+    .checkBox input[type=checkbox]:checked+div {
+      left: -10px;
+      top: -10px;
+    }
+
+    .checkBox input[type=checkbox] {
+      position: absolute;
+      left: 50px;
+      visibility: hidden;
+    }
+
+    .transition {
+      transition: 300ms ease;
+    }
+
+    /* From Uiverse.io by Galahhad */
+    .input {
+      max-width: 12rem;
+      padding: 5px;
+      border: none;
+      border-radius: 4px;
+      box-shadow: 2px 2px 7px 0 rgb(0, 0, 0, 0.2);
+      outline: none;
+      color: dimgray;
+    }
+
+    .container {
+      display: flex;
+      width: 100%;
+
+      >div {
+        width: 50%;
+        padding: 1rem;
+      }
+    }
+
+    /* grid */
+    .grid {
+      display: grid;
+      width: 100%;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      align-items: center;
+      justify-items: stretch;
+
+      .s2 {
+        grid-column-end: span 2;
+      }
+
+      .s3 {
+        grid-column-end: span 3;
+      }
+
+      .next {
+        grid-column-start: 1;
+      }
+    }
+
+    /* alert box*/
+    .alert {
+      background-color: rgb(35 37 49 / var(--tw-bg-opacity, 1));
+      color: whitesmoke;
+      text-align: center;
+      max-width: fit-content;
+      padding: 1.2rem;
+      border-radius: 0.6rem;
+      position: 1;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      bottom: 0;
+      transition: opacity 0.4s ease, bottom 0.4s ease;
+    }
+
+    .alert.active {
+      opacity: 1;
+      bottom: 12rem;
+      pointer-events: auto;
+    }
+
+    /*button */
+    .btn_container {
+      width: 100%;
+      display: flex;
+
+      .btn {
+        margin: auto;
+      }
+    }
+
+    .btn {
+      position: relative;
+      font-size: 17px;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 1em 2.5em;
+      display: inline-block;
+      cursor: pointer;
+      border-radius: 6em;
+      transition: all 0.2s;
+      border: none;
+      font-family: inherit;
+      font-weight: 500;
+      color: black;
+      background-color: white;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn:active {
+      transform: translateY(-1px);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn::after {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      border-radius: 100px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition: all 0.4s;
+    }
+
+    .btn::after {
+      background-color: #fff;
+    }
+
+    .btn:hover::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+
+    .resultat {
+      padding-top: 1rem;
+      width: 50%;
+      margin: auto;
+    }

@@ -111,6 +111,10 @@ textarea {
   }
 }
 
+span{
+  text-align: start!;
+}
+
 /* grid */
 .grid {
   display: grid;
